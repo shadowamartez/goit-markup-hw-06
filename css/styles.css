@@ -34,12 +34,29 @@
     --footer-soc-link-bckcolor: rgba(255, 255, 255, 0.1);
     --footer-soc-link-bcgcolor-active: #31D0AA;
     --footer-soc-link-color: #F4F4FD; 
+    --footer-subscribe-title-color: #FFFFFF; 
+    --subscribe-input-color: #f4f4fd; 
+    --subscribe-input-border-color-active: #4D5AE5;
+    --subscribe-btn-bcgcolor: #4D5AE5; 
+    --subscribe-btn-bcgcolor-active: #404BBF; 
+    --subscribe-name-btn-color: #FFFFFF; 
     --modal-background-color: #FCFCFC; 
     --modal-close-background-color: #E7E9FC;
     --modal-close-x-color: #000000; 
     --modal-close-x-bcgcolor-active: #404BBF;
     --modal-close-x-color-active: #FFFFFF; 
     --modal-title-color: #2E2F42;
+    --modal-label-text-color: #8E8F99; 
+    --modal-input-border-color-active: #4D5AE5; 
+    --modal-input-fill-color-active: #4D5AE5; 
+    --check-text-color: #757575; 
+    --check-text-span-border-color: #2E2F42; 
+    --check-text-bcgcolor-active: #404BBF; 
+    --check-text-fill-active: #F4F4FD; 
+    --check-text-bordercolor-active: #404BBF; 
+    --btn-modal-send-bcgcolor: #4D5AE5; 
+    --btn-modal-send-color: #FFFFFF;
+    --btn-modal-send-bcgcolor-active: #404BBF; 
 }
 
 body {
@@ -570,16 +587,21 @@ address {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
+    color: var(--footer-subscribe-title-color);
     margin-bottom: 16px;
 }
 
 .subscribe-container {
     display: flex;
+
 }
 
 .subscribe-form {
 
+}
+
+.subscribe-container-container {
+    display: flex;
 }
 
 .subscribe-label {}
@@ -590,14 +612,30 @@ address {
     border-radius: 4px;
     background-color: transparent;
     width: 264px;
+    margin-right: 24px;
+    color: var(--subscribe-input-color); 
+    outline: transparent;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-input:focus {
+    border-color: var(--subscribe-input-border-color-active);
 }
 
 .subscribe-btn {
     width: 165px;
     padding: 8px 24px;
-    background-color:  #4D5AE5;
+    background-color:  var(--subscribe-btn-bcgcolor);
     border-radius: 4px;
     border: transparent;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+    background-color: var(--subscribe-btn-bcgcolor-active);
 }
 
 .subcribe-style-container { 
@@ -611,7 +649,7 @@ address {
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
+    color: var(--subscribe-name-btn-color);
 }
 
 .subscribe-icon {
@@ -832,7 +870,7 @@ address {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: #8E8F99;
+    color: var(--modal-label-text-color);
 }
 
 .input-wrap {
@@ -853,7 +891,7 @@ address {
 }
 
 .modal-input:focus {
-    border-color: #4D5AE5; 
+    border-color: var(--modal-input-border-color-active); 
 }
 
 .modal-input-icon {
@@ -867,7 +905,7 @@ address {
 }
 
 .modal-input:focus +.modal-input-icon {
-    fill: #4D5AE5;
+    fill: var(--modal-input-fill-color-active);
 }
 
 .modal-textarea {
@@ -887,23 +925,21 @@ address {
 }
 
 .modal-textarea:focus {
-    border-color: #4D5AE5;
+    border-color: var(--modal-input-border-color-active);
 }
 
 .modal-check {
     margin-bottom: 0; 
 }
 
-.check-icon {
-
-}
+.check-icon {}
 
 .check-text {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: #757575;
+    color: var(--check-text-color);
     display: flex;
     gap: 5px;
 }
@@ -911,7 +947,7 @@ address {
 .check-text span {
     width: 16px;
     height: 16px;
-    border: 1.25px solid #2E2F42;
+    border: 1.25px solid var(--check-text-span-border-color);
     border-radius: 2px;
     display: flex;
     align-items: center;
@@ -924,13 +960,13 @@ address {
 }
 
 .modal-check:checked + .check-text span {
-    background-color: #404BBF;
+    background-color: var(--check-text-bcgcolor-active);
     border: none;
-    fill: #F4F4FD;
+    fill: var(--check-text-fill-active);
 }
 
 .modal-check:focus + .check-text span {
-    border-color: #404BBF; 
+    border-color: var(--check-text-bordercolor-active); 
 }
 
 .btn-modal-send {
@@ -939,13 +975,13 @@ address {
     align-items: center;
     justify-content: center;
     margin: auto;
-    background: #4D5AE5;
+    background: var(--btn-modal-send-bcgcolor);
     width: 169px;
     height: 56px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border:transparent; 
-    color: #FFFFFF;
+    color: var(--btn-modal-send-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -955,5 +991,5 @@ address {
 
 .btn-modal-send:hover,
 .btn-modal-send:focus {
-    background-color: #404BBF;
+    background-color: var(--btn-modal-send-bcgcolor-active);
 }
