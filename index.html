@@ -358,22 +358,16 @@
             </div>
             <div class="footer-container-subscribe">
                 <p class="footer-subscribe-title">Subscribe</p>
-                <div class="subscribe-container">
-                    <form class="subscribe-form">
-                        <div class="subscribe-container-container">
-                            <label class="subscribe-label" for="user-subscribe" aria-label="subscribe"></label>
-                            <input class="subscribe-input" type="email" id="user-subscribe" name="user-subscribe" placeholder="E-mail">
-                            <button class="subscribe-btn">
-                                <div class="subcribe-style-container">
-                                    <span class="subscribe-name-btn">Subscribe</span>
-                                    <svg class="subscribe-icon" width="24" height="24">
-                                        <use href="./images/svg-sprite.svg#icon-subscribe"></use>
-                                    </svg>
-                                </div>
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                <form class="subscribe-form">
+                    <div class="subscribe-container-container">
+                        <input class="subscribe-input" type="email" id="user-subscribe" name="user-subscribe" placeholder="E-mail">
+                        <button class="subscribe-btn">Subscribe
+                            <svg class="subscribe-icon" width="24" height="24">
+                                <use href="./images/svg-sprite.svg#icon-subscribe"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </footer>
@@ -413,11 +407,11 @@
                         </svg>
                     </div>
                 </div>
-                <div class="modal-field">
+                <div class="modal-field-textarea">
                     <label class="modal-label-text" for="user-comment">Comment</label>
                     <textarea class="modal-textarea" name="user-comment" id="user-comment" placeholder="Text input" ></textarea>
                 </div>
-                <div class="modal-field">
+                <div class="modal-field-checkbox">
                     <input class="modal-check visually-hidden" type="checkbox" id="user-privacy" name="user-privacy" value="true">
                     <label class="check-text" for="user-privacy">
                         <span>
